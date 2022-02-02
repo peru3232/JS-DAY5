@@ -33,7 +33,7 @@ class Car extends Basic {
     output() {
         return `<div class="col-4 py-3"><div class="card" style="width: 18rem;">
         <div class="card-header">Car Properties</div>
-        <img src="${this.img}" height = "150" alt="">
+        <img src="${this.img}" height = "150" alt="car">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">${this.name}</li>
           <li class="list-group-item">${this.brand}</li>
@@ -75,7 +75,7 @@ class Animal extends Basic {
     output() {
         return `<div class="col-4 py-3"><div class="card" style="width: 18rem;">
         <div class="card-header">Animal</div>
-        <img src="${this.img}" height = "150"alt="">
+        <img src="${this.img}" height = "150"alt="animal">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">${this.name}</li>
           <li class="list-group-item">${this.type}</li>
@@ -109,7 +109,7 @@ class Person extends Basic {
     output() {
         return `<div class="col-4 py-3"><div class="card" style="width: 18rem;">
         <div class="card-header">Person</div>
-        <img src="${this.img}" height = "150"alt="">
+        <img src="${this.img}" height = "150"alt="person">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">${this.name}</li>
           <li class="list-group-item">${this.lname}</li>
