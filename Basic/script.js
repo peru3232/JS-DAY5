@@ -101,9 +101,11 @@ result.innerHTML += animal3.output();
 class Person extends Basic {
 
     lname;
-    constructor(name,lname,weight,age,img){
-        super(name,weight,age,img)
+    birthday;
+    constructor(name,lname,weight,birthday,img){
+        super(name,weight,'',img)
         this.lname=lname;
+        this.birthday=birthday;
     }
 
     output() {
@@ -114,15 +116,23 @@ class Person extends Basic {
           <li class="list-group-item">${this.name}</li>
           <li class="list-group-item">${this.lname}</li>
           <li class="list-group-item">${this.weight}</li>
-          <li class="list-group-item">${this.age}</li>
+          <li class="list-group-item">${this.xage()}</li>
+          <li class="list-group-item"></li>
 
         </ul>
       </div></div>`
     }
 
-    #getAge(){
+    xage() {
         var date1 = new Date();
-    var date2 = new Date("03/24/1975");
+        var date2 = new Date(this.birthday);
+        var Difference_In_Time = date1.getTime() - date2.getTime();
+        Difference_In_Time /= 60
+        Difference_In_Time /= 60
+        Difference_In_Time /= 24
+        Difference_In_Time /= 1000
+        Difference_In_Time /= 365
+        return Math.floor(Difference_In_Time);
 
     }
 
@@ -130,25 +140,9 @@ class Person extends Basic {
 
 
 
-const person1 = new Person("Julia","Tritonson", "12kg", "4 Years", "https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg");
-const person2 = new Person("Herbert", "Blad",  "70kg", "27 Years", "https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg");
-const person3 = new Person("Jacky", "Johnny", "60kg",  "66 Years", "https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_1280.jpg");
+const person1 = new Person("Julia","Tritonson", "12kg", "03/24/2017", "https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg");
+const person2 = new Person("Herbert", "Blad",  "70kg", "07/24/1988", "https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg");
+const person3 = new Person("Jacky", "Johnny", "60kg",  "07/03/1978", "https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_1280.jpg");
 result.innerHTML += person1.output();
 result.innerHTML += person2.output();
 result.innerHTML += person3.output();
-
-
-
-// var date1 = new Date();
-// var date2 = new Date("03/24/1975");
-  
-// // To calculate the time difference of two dates
-// var Difference_In_Time = date1.getTime() - date2.getTime();
-// Difference_In_Time /= 60
-// Difference_In_Time /= 60
-// Difference_In_Time /= 24
-// Difference_In_Time /= 1000
-// Difference_In_Time /= 365
-// Difference_In_Time = Math.floor(Difference_In_Time);
-
-// console.log(Difference_In_Time)
