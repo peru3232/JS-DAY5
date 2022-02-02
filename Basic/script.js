@@ -110,8 +110,6 @@ class Person extends Basic {
           <li class="list-group-item">${this.lname}</li>
           <li class="list-group-item">${this.weight}</li>
           <li class="list-group-item">${this.age}</li>
-          <li class="list-group-item"></li>
-
         </ul>
       </div></div>`
     }
