@@ -146,18 +146,3 @@ const person3 = new Person("Jacky", "Johnny", "60kg",  "07/03/1978", "https://cd
 result.innerHTML += person1.output();
 result.innerHTML += person2.output();
 result.innerHTML += person3.output();
-
-
-
-function age(birthday){
-  var date1 = new Date();
-  var date2 = new Date(birthday);
-  var Difference_In_Time = date1.getTime() - date2.getTime();
-  Difference_In_Time /= 60
-  Difference_In_Time /= 60
-  Difference_In_Time /= 24
-  Difference_In_Time /= 1000
-  Difference_In_Time /= 365
-  return Math.floor(Difference_In_Time);
-
-}
